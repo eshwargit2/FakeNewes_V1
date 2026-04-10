@@ -10,7 +10,7 @@ FakeNews.V1 is a fake news detection web application with a frontend and Python 
 - Purpose: Detect potentially fake or misleading news content
 - Input Modes: Text input, URL input, optional image input
 - Output: Label (`Real` or `Fake`), confidence score, and reasoning
-- Model Approach: Pretrained models are used for analysis (not Gemini)
+- Model Approach: Pretrained models are used for analysis 
 
 ## Key Features
 
@@ -22,29 +22,16 @@ FakeNews.V1 is a fake news detection web application with a frontend and Python 
 
 ## Team Members and Collaborators
 
-### 1. Sibiraj S
+### 1. Sibiraj S B.TECH IT
+Software Developer
 
-- Qualification: B.Tech IT
-- Role: Software Developer
-- GitHub: [Add GitHub Profile](https://github.com/)
-- LinkedIn: [Add LinkedIn Profile](https://www.linkedin.com/)
-- Instagram: [Add Instagram Profile](https://www.instagram.com/)
 
-### 2. Sharvesh S
+### 2. Sharvesh S B.TECH IT
+Software Developer
 
-- Qualification: B.Tech IT
-- Role: Software Developer
-- GitHub: [Add GitHub Profile](https://github.com/)
-- LinkedIn: [Add LinkedIn Profile](https://www.linkedin.com/)
-- Instagram: [Add Instagram Profile](https://www.instagram.com/)
+### 3. Soundhareshwaran S.R B.E CSE 
+Full Stack Developer
 
-### 3. Soundhareshwaran S.R
-
-- Qualification: B.E CSE
-- Role: Full Stack Developer
-- GitHub: [Add GitHub Profile](https://github.com/)
-- LinkedIn: [Add LinkedIn Profile](https://www.linkedin.com/)
-- Instagram: [Add Instagram Profile](https://www.instagram.com/)
 
 ## Project Structure
 
