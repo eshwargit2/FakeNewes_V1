@@ -64,7 +64,4 @@ samples/
 
 3. Open `frontend/index.html` in your browser.
 
-## Notes
 
-- This project documentation uses pretrained model terminology.
-- Replace placeholder profile links with actual GitHub, LinkedIn, and Instagram links for each team member.
