@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FND | Fake News Detection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbarInner">
+        <div class="brand">
+          <span class="shield"></span>
+          <span>FND</span>
+        </div>
+        <nav class="nav">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
+          <a href="#team">Team</a>
+        </nav>
+        <a class="tryBtn" href="#demo">Try Now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container heroInner">
+          <p class="chip">AI-Powered Multimodal Detection</p>
+          <h1>Detect <span>Fake News</span> Before It Spreads</h1>
+          <p class="heroText">
+            Analyze text, URL context, and images with ML model to identify misinformation
+            patterns in a clean demo interface.
+          </p>
+          <div class="heroActions">
+            <a class="primary" href="#demo">Try Demo</a>
+            <a class="secondary" href="#how-it-works">How It Works</a>
+          </div>
+          <div class="stats">
+            <div><strong>89.2%</strong><small>Accuracy</small></div>
+            <div><strong>ML model</strong><small>AI Model</small></div>
+            <div><strong>Real-time</strong><small>Analysis</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="demo container">
+        <article class="analyzer">
+          <div class="tabs">
+            <button id="textTab" class="tab active" type="button">Text Input</button>
+            <button id="urlTab" class="tab" type="button">URL Input</button>
+          </div>
+
+          <div id="textPane" class="pane">
+            <label for="newsText">News Article Text</label>
+            <textarea
+              id="newsText"
+              rows="5"
+              placeholder="Paste the news content here..."
+            ></textarea>
+          </div>
+
+          <div id="urlPane" class="pane hidden">
+            <label for="newsUrl">News URL</label>
+            <input id="newsUrl" type="url" placeholder="https://example.com/news-story" />
+          </div>
+
+          <div class="uploadWrap">
+            <label for="newsImage">Optional Image</label>
+            <input id="newsImage" type="file" accept="image/*" />
+            <small id="imageHint">No image selected</small>
+          </div>
+
+          <div class="actionRow">
+            <button id="checkBtn" class="analyzeBtn" type="button">Analyze</button>
+            <button id="clearBtn" class="resetBtn" type="button">Reset</button>
+          </div>
+
+          <div id="loading" class="loading hidden" aria-live="polite">
+            <span class="spinner" aria-hidden="true"></span>
+            <span>Analyzing content...</span>
+          </div>
+          <div id="errorBox" class="error hidden"></div>
+
+          <section id="resultEmpty" class="result empty">
+            Submit text, a URL, and/or an image to analyze.
+          </section>
+
+          <section id="resultBox" class="result hidden">
+            <div class="resultHead">
+              <h3 id="resultTitle">Likely Fake</h3>
+              <p id="confidencePill">Confidence: --%</p>
+            </div>
+            <div class="scoreWrap">
+              <p>Analysis Score</p>
+              <strong id="analysisScore">--%</strong>
+              <div class="meter"><div id="scoreBar"></div></div>
+            </div>
+            <p id="reasonText" class="reason">--</p>
+            <details>
+              <summary>Raw model output</summary>
+              <pre id="rawText"></pre>
+            </details>
+          </section>
+        </article>
+      </section>
+
+      <section id="how-it-works" class="infoSection container">
+        <div class="sectionHead">
+          <p class="chip">How It Works</p>
+          <h2>Simple 3-Step Detection Flow</h2>
+        </div>
+        <div class="steps">
+          <article class="infoCard">
+            <h3>1) Provide News Input</h3>
+            <p>
+              Enter article text, paste a news URL for context-based checking, or upload an
+              image. You can also combine text + image for stronger analysis.
+            </p>
+          </article>
+          <article class="infoCard">
+            <h3>2) ML Model Analysis</h3>
+            <p>
+              The frontend sends your data to the Python backend (`/analyze`). FastAPI/Flask
+              forwards it to ML model using your system instruction for fact-check style
+              classification.
+            </p>
+          </article>
+          <article class="infoCard">
+            <h3>3) Structured Result</h3>
+            <p>
+              The API returns a JSON response with <strong>label</strong>, <strong>reason</strong>,
+              and <strong>confidence</strong>. The UI displays this as likely real/fake with score.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="features" class="infoSection container">
+        <div class="sectionHead">
+          <p class="chip">Features</p>
+          <h2>Built for This Project</h2>
+        </div>
+        <div class="featureGrid">
+          <article class="infoCard">
+            <h3>Multimodal Input</h3>
+            <p>Supports text, optional image upload, and URL mode from a single interface.</p>
+          </article>
+          <article class="infoCard">
+            <h3>FastAPI + Flask</h3>
+            <p>
+              Primary backend in FastAPI (`backend/main.py`) and an alternative Flask version
+              (`backend/app.py`).
+            </p>
+          </article>
+          <article class="infoCard">
+            <h3>ML Model Integration</h3>
+            <p>
+              Dynamically selects supported ML models and returns clean errors for quota or
+              API issues.
+            </p>
+          </article>
+          <article class="infoCard">
+            <h3>Secure Config</h3>
+            <p>
+              Uses environment variable API key loading via `.env`, with CORS enabled for local
+              frontend testing.
+            </p>
+          </article>
+          <article class="infoCard">
+            <h3>Modern UI</h3>
+            <p>
+              Responsive dark theme, loading indicator, result card, score bar, and raw response
+              viewer.
+            </p>
+          </article>
+          <article class="infoCard">
+            <h3>Beginner Friendly</h3>
+            <p>Simple project structure with clean HTML/CSS/JS and readable Python backend code.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="infoSection container">
+        <div class="sectionHead">
+          <p class="chip">Demo</p>
+          <h2>Try These Test Inputs</h2>
+        </div>
+        <div class="demoSamples">
+          <article class="infoCard">
+            <h3>Likely Fake Sample</h3>
+            <p>
+              "SHOCKING!!! This miracle cure will change your life!!! Unbelievable results that
+              doctors don't want you to know!"
+            </p>
+          </article>
+          <article class="infoCard">
+            <h3>Likely Real Sample</h3>
+            <p>
+              "According to the state health department bulletin published on Monday, seasonal flu
+              cases rose 12% this week and vaccination was advised for high-risk groups."
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="team" class="infoSection container">
+        <div class="sectionHead">
+          <p class="chip">Team</p>
+          <h2>Project Contributors</h2>
+        </div>
+        <div class="teamGrid">
+          <article class="infoCard teamCard">
+            <h3>Frontend Developer</h3>
+            <p>Built responsive UI, interactions, tabs, loading states, and result visualization.</p>
+          </article>
+          <article class="infoCard teamCard">
+            <h3>Backend Developer</h3>
+            <p>Implemented FastAPI + Flask endpoints, ML model integration, and structured responses.</p>
+          </article>
+          <article class="infoCard teamCard">
+            <h3>Project Owner</h3>
+            <p>Defined requirements, testing cases, and final app behavior for fake news demo flow.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <span>Backend:</span>
+      <code id="apiUrlLabel"></code>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

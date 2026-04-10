@@ -1,0 +1,14 @@
+Fake news examples
+
+“Scientists confirm drinking hot lemon water every 30 minutes kills all cancer cells in 48 hours.”
+“Government announces all citizens will receive $10,000 by tonight if they forward this message to 20 people.”
+“NASA says Earth will be in total darkness for 6 days next month due to a rare cosmic event.”
+“A celebrity was arrested for running an international money-laundering ring, according to an unnamed source.”
+“Hospitals are hiding a simple 2-ingredient cure for diabetes because it would destroy the pharmaceutical industry.”
+
+Real news style examples
+“The city municipal corporation launched a new waste segregation campaign starting Monday, according to an official press release.”
+“The national weather department issued a heavy rainfall alert for coastal districts for the next 48 hours.”
+“The central bank kept interest rates unchanged in its latest policy review, citing stable inflation trends.”
+“The health ministry reported an increase in seasonal flu cases and advised vaccination for high-risk groups.”
+“A regional court ordered a temporary halt to the infrastructure project pending environmental review.”

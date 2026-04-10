@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+google-generativeai
+pillow
+python-dotenv
+
+flask
+flask-cors
