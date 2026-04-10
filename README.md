@@ -2,6 +2,8 @@
 
 FakeNews.V1 is a fake news detection web application with a frontend and Python backend. It analyzes user-provided news text, URL context, and optional images to classify content as `Real` or `Fake`.
 
+![FakeNews.V1 Homepage](HomePage.png)
+
 ## Project Details
 
 - Project Name: FakeNews.V1
